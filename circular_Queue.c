@@ -1,29 +1,33 @@
 //circular Queue by c language 
 #include<stdio.h>
 #include<stdlib.h>
-#define max 8
+#define max 4
 int f=-1,r=-1,q[max];
-void enqueue(int n)
-{
+void enqueue()
+{  int x;
     if((r+1)%max ==f){
-printf("\nThe Queue is full.");
+printf("\n!!! The Queue is full !!!");
     }
 else if(f==-1 && r==-1)
 {
 f++;
 r++;
-q[r]=n;
+ printf("\nEnter the value: ");
+ scanf("%d",&x);
+q[r]=x;
 }
 else{
  r=(r+1)%max;
- q[r]=n;
+  printf("\nEnter the value: ");
+  scanf("%d",&x);
+ q[r]=x;
 }
 }
 void dequeue()
 {
     if(f==-1 && r==-1)
     {
-    printf("\nThe Queue is empty.");
+    printf("\n!!! The Queue is empty !!!");
     }
     else if(f==r)
     {
@@ -36,9 +40,13 @@ void dequeue()
         f=(f+1)%max;
     }
 }
-void display()
-{int i;
+void display(){
+if(f==-1){
+	printf("\n!!! The Queue is Empty !!!");
+}
+else{int i;
 i=f;
+printf("\nThe elements are: ");
     while(i!=r)
     {
         printf("%d ",q[i]);
@@ -46,18 +54,17 @@ i=f;
     }
  printf("%d",q[r]);
 }
+}
 int main()
 { printf("Welcome to Queue");
- int c,x;
+ int c;
     while(1)
         {
             printf("\n\nGive a choice...\n1.Enter data \n2.Delete data \n3.Display data \n4.Exit program\nEnter ypur choice: ");
             scanf("%d",&c);
             switch(c){
                 case 1:{
-                    printf("\nEnter the value: ");
-                    scanf("%d",&x);
-                    enqueue(x);
+                    enqueue();
                     break;
                 }
                 case 2:{
