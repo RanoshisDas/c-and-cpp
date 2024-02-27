@@ -1,8 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/ranoshisdas/Documents/document/code/c-and-cpp/21stickgame'
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z7player1ii, symObjAddr: 0x0, symBinAddr: 0x100003B18, symSize: 0xE0 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: __Z7player1ii, symObjAddr: 0x0, symBinAddr: 0x100003B18, symSize: 0xE0 }
-  - { offsetInCU: 0x89, offset: 0x89, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xE0, symBinAddr: 0x100003BF8, symSize: 0x284 }
-...
